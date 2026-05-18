@@ -2,8 +2,12 @@
     "manifest_version": 3,
     "name": "password manager",
     "version": "1.0",
-    "description": "Save and Manage passwords in a clean and compact Chrome browser extension",
+    "description": "Save, Generate and Manage passwords in a clean and compact Chrome browser extension",
+    "permissions": ["storage"],
     "action": {
         "default_popup": "index.html"
-    }
+    },
+    "background": {
+    "service_worker": "background.js"
+  }
 }
