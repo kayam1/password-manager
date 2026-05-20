@@ -2,3 +2,18 @@
 @plugin "daisyui/index.js" {
     themes: bumblebee --default;
 };
+
+@layer base {
+  .text-stroke-1 {
+    -webkit-text-stroke: 1px rgb(43, 33, 33);
+  }
+  .text-stroke-2 {
+    -webkit-text-stroke: 1px rgba(43, 33, 33, 0.5);
+  }
+  .text-stroke-3 {
+    -webkit-text-stroke: 1px rgba(43, 33, 33, 0.35);
+  }
+  .text-stroke-4 {
+    -webkit-text-stroke: 1px rgba(43, 33, 33, 0.1);
+  }
+}

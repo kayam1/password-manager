@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
+import RegisterPage from "./pages/RegisterPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
@@ -23,7 +24,6 @@ export default function App() {
     loadData();
   }, []); //Empty array = only run this once at the start
 
-
   // While loading show nothing
   if (isLoading) {
     return <div className="p-4 text-center">Loading...</div>;
@@ -35,6 +35,7 @@ export default function App() {
       <Routes>
         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/MainPage" element={<MainPage />} />
+        <Route path="/RegisterPage" element={<RegisterPage />} />
       </Routes>
     </MemoryRouter>
 );
