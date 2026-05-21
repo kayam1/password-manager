@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export default function usePasswordValidator(input) { 
+export default function usePasswordRequirementsValidator(input) { 
 
   const charUpperCount = useRef(0);
   const charLowerCount = useRef(0);
@@ -29,5 +29,5 @@ export default function usePasswordValidator(input) {
       console.log("symbol: "+lastInput);
     }
 
-    return charUpperCount.current, charLowerCount.current, numCount.current, symbolCount.current, isValidLength;
+    return { upperCount: charUpperCount.current, lowerCount: charLowerCount.current, numCount: numCount.current, symbolCount: symbolCount.current, isValidLength };
   }

@@ -6,20 +6,28 @@ import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+import { getLoginState, existsHashAndSalt } from "./services/StorageManager";
+
 export default function App() {
   //We assume not logged in and still loading
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasMasterPassword, setHasMasterPassword] = useState(false);
 
-  //When the app first starts, check storage
+  //When the app first starts, check storage THIS RUNS FIRST!!!
   useEffect(() => {
     async function loadData() {
-        const result = await chrome.storage.session.get(["isLoggedIn"]);
-        if (result.isLoggedIn == "true")
+    const mPasswordState = await existsHashAndSalt();
+      if (mPasswordState) {   
+        setHasMasterPassword(true);
+        const loginState = await getLoginState()
+        if (loginState == "true") {
           setIsLoggedIn(true);
-        else 
+        } else {
           setIsLoggedIn(false)
-        setIsLoading(false);
+        }  
+      }
+      setIsLoading(false);
     }
     loadData();
   }, []); //Empty array = only run this once at the start
@@ -31,7 +39,7 @@ export default function App() {
 
   //After loading show the right page
   return (
-    <MemoryRouter initialEntries={[isLoggedIn ? "/MainPage" : "/LoginPage"]}>
+    <MemoryRouter initialEntries={[hasMasterPassword ? (isLoggedIn ? "/MainPage" : "/LoginPage") : "/RegisterPage"]}>
       <Routes>
         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/MainPage" element={<MainPage />} />

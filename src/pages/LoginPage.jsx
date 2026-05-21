@@ -1,17 +1,20 @@
 import Button from '../components/Button';
 import { useState } from 'react';
 import { useNavigate } from "react-router";
+import { setLoginState, getHashAndSalt } from '../services/StorageManager'
+import generateHashAndSalt from '../services/PasswordHashGenerator';
+import passwordIsValid from '../services/LoginPasswordVerification';
 
 export default function LoginPage() {
-  const password = "12345";
-  const [input, setInput] = useState("");
+  const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    if (input === password) {
-      chrome.storage.session.set({ isLoggedIn: "true" });
+    const { hash, salt } = await getHashAndSalt();
+    if (await passwordIsValid(password, hash, salt)) {
+      await setLoginState("true");
       setErrorMsg("");
       navigate("/MainPage");
     } else {
@@ -27,11 +30,11 @@ export default function LoginPage() {
   return (
     <div className='flex flex-col w-100 h-150 bg-base-200 border-2 border-secondary shadow-md font-mono tracking-tighter' >
       <div className="grow">
-        <h1 className="text-primary text-6xl antialiased text-center pb-22 font-bold mt-5 text-stroke-1">Password Manager</h1>
+        <h1 className="text-primary text-6xl antialiased text-center pb-25 font-bold mt-5 text-stroke-1">Password Manager</h1>
         <form className='ml-10' onSubmit={handleSubmit}>
           <label className='text-secondary text-2xl font-bold text-stroke-2' for="mPassword">Master Password</label><br />
-          <input className="input border-primary-content mt-2 focus:outline-amber-400 focus:border-primary-content focus:placeholder:opacity-0 bg-base-200" type="password" id="mPassword"
-            placeholder="VeryStrongPassword123!" onChange={(event) => setInput(event.target.value)}></input>
+          <input className="input border-primary-content mt-2 focus:outline-primary focus:border-primary-content focus:placeholder:opacity-0 bg-base-200 placeholder-primary-content placeholder:opacity-60" 
+            type="password" id="mPassword" placeholder="VerySecurePassword123!" onChange={(event) => setPassword(event.target.value)}></input>
           <div className='flex flex-row justify-between items-center pt-2'>
             <div>
               <p className='text-primary-content text-md self-start'>Want a new account? </p>
