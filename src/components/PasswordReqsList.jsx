@@ -15,5 +15,5 @@
       <li><span className='text-secondary font-bold text-stroke-4'>Both</span> password are <span className='text-secondary font-bold text-stroke-4'>Matching</span> 
         &nbsp;{getIcon(isSamePassword)}</li>
       </ul>
-    )
+    );
   }

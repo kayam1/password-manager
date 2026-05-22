@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { setLoginState, getHashAndSalt } from '../services/StorageManager'
 import generateHashAndSalt from '../services/PasswordHashGenerator';
 import passwordIsValid from '../services/LoginPasswordVerification';
+import PasswordField from '../components/PasswordField';
 
 export default function LoginPage() {
   const [password, setPassword] = useState("");
@@ -33,9 +34,14 @@ export default function LoginPage() {
         <h1 className="text-primary text-6xl antialiased text-center mb-25 font-bold mt-5 text-stroke-1">Password Manager</h1>
         <form className='ml-10' onSubmit={handleSubmit}>
           <label className='text-secondary text-2xl font-bold text-stroke-2' for="mPassword">Master Password</label><br />
-          <input className="input border-primary-content mt-2 focus:outline-primary focus:border-primary-content focus:placeholder:opacity-0 bg-base-200 placeholder-primary-content placeholder:opacity-60" 
-            type="password" id="mPassword" placeholder="VerySecurePassword123!" maxlength="64" onChange={(event) => setPassword(event.target.value)}></input>  
-            <MyButton className='mt-2' text="Sign in" />
+            <PasswordField
+              id="mPassword"
+              placeholder="VerySecurePassword123!"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              maxlength="64"
+            />
+            <MyButton className='mt-3' text="Sign in" />
           <p className='error font-bold mt-15 text-center'>{errorMsg}</p>
         </form>
       </div>
