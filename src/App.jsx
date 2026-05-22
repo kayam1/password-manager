@@ -6,7 +6,7 @@ import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
-import { getLoginState, existsHashAndSalt } from "./services/StorageManager";
+import { getLoginState, hashAndSaltExists } from "./services/StorageManager";
 
 export default function App() {
   //We assume not logged in and still loading
@@ -17,7 +17,7 @@ export default function App() {
   //When the app first starts, check storage THIS RUNS FIRST!!!
   useEffect(() => {
     async function loadData() {
-    const mPasswordState = await existsHashAndSalt();
+    const mPasswordState = await hashAndSaltExists();
       if (mPasswordState) {   
         setHasMasterPassword(true);
         const loginState = await getLoginState()

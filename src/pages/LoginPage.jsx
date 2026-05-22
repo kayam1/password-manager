@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import MyButton from '../components/MyButton';
 import { useState } from 'react';
 import { useNavigate } from "react-router";
 import { setLoginState, getHashAndSalt } from '../services/StorageManager'
@@ -17,7 +17,8 @@ export default function LoginPage() {
       await setLoginState("true");
       setErrorMsg("");
       navigate("/MainPage");
-    } else {
+    } 
+    else {
       setErrorMsg("Password is incorrect");
     }
   }
@@ -26,22 +27,15 @@ export default function LoginPage() {
     event.preventDefault();
     navigate("/RegisterPage");
   }
-
   return (
-    <div className='flex flex-col w-100 h-150 bg-base-200 border-2 border-secondary shadow-md font-mono tracking-tighter' >
+    <div className='flex flex-col w-100 h-150 bg-base-200 border-2 border-secondary font-mono tracking-tighter' >
       <div className="grow">
-        <h1 className="text-primary text-6xl antialiased text-center pb-25 font-bold mt-5 text-stroke-1">Password Manager</h1>
+        <h1 className="text-primary text-6xl antialiased text-center mb-25 font-bold mt-5 text-stroke-1">Password Manager</h1>
         <form className='ml-10' onSubmit={handleSubmit}>
           <label className='text-secondary text-2xl font-bold text-stroke-2' for="mPassword">Master Password</label><br />
           <input className="input border-primary-content mt-2 focus:outline-primary focus:border-primary-content focus:placeholder:opacity-0 bg-base-200 placeholder-primary-content placeholder:opacity-60" 
-            type="password" id="mPassword" placeholder="VerySecurePassword123!" onChange={(event) => setPassword(event.target.value)}></input>
-          <div className='flex flex-row justify-between items-center pt-2'>
-            <div>
-              <p className='text-primary-content text-md self-start'>Want a new account? </p>
-              <a href="" className='text-secondary text-md self-start hover:underline no-underline' onClick={handleRegisterClick}><b>Create one!</b></a>
-            </div>
-            <Button text="Sign in" />
-          </div>
+            type="password" id="mPassword" placeholder="VerySecurePassword123!" maxlength="64" onChange={(event) => setPassword(event.target.value)}></input>  
+            <MyButton className='mt-2' text="Sign in" />
           <p className='error font-bold mt-15 text-center'>{errorMsg}</p>
         </form>
       </div>

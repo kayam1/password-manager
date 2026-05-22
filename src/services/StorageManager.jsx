@@ -13,11 +13,11 @@ export async function getHashAndSalt() {
   return { hash: hashResult["Master-Password-Hash"], salt: saltResult["Master-Password-Salt"] };
 }
 
-export async function clearHashAndSalt() {
+export async function removeHashAndSalt() {
   await chrome.storage.local.remove(["Master-Password-Hash", "Master-Password-Salt"]); //Deleting Master Password and Salt
 }
 
-export async function existsHashAndSalt() {
+export async function hashAndSaltExists() {
   const keys = await chrome.storage.local.getKeys();
   return keys.includes("Master-Password-Hash") && keys.includes("Master-Password-Salt");  //Checks for the existence of Master Password and Salt
 }
