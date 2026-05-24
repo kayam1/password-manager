@@ -18,11 +18,12 @@ export default function PasswordField({ id, placeholder, value, onChange, maxlen
         className="input border-primary-content mt-2 focus:outline-primary focus:placeholder:opacity-0 bg-base-200 placeholder-primary-content placeholder:opacity-60 pr-14"
       />
       <div className="absolute right-12 top-7 -translate-y-1/2 flex items-center gap-2">
-        <div className="h-8 w-px bg-primary-content/60" />
+        <div className="h-10 w-px bg-primary-content/60" />
         <button
             type="button"
             onClick={() => setIsVisible(!isVisible)}
-            className="text-primary-content/60 hover:text-primary transition-colors"
+            tabIndex={-1}
+            className="text-primary-content/60 hover:text-primary transition-colors p-2 -m-2 cursor-pointer flex items-center"
         >
             {isVisible ? <OpenEyeSVG /> : <ClosedEyeSVG />}
         </button>
