@@ -20,7 +20,6 @@ export default function RegisterPage() {
     event.preventDefault();
     if (passwordIsValid && isSamePassword) {
       const { hash, salt } = await generateHashAndSalt(password1);
-      console.log(hash, "\n", salt);
       await setHashAndSalt(hash, salt);
       setLoginState("true");
       navigate("/MainPage");
@@ -54,7 +53,7 @@ export default function RegisterPage() {
           onChange={(event) => setPassword2(event.target.value)}
           maxlength="64"
         />
-        <MyButton className='mt-3' disabled={!passwordIsValid || !isSamePassword} text="Register"/>
+        <MyButton className='mt-3' disabled={!passwordIsValid || !isSamePassword} text="Register" type="submit"/>
       </form>
       <div className='bg-amber-400/50  mx-15 rounded-3xl'>
         <h3 className='text-secondary text-xl font-bold text-center mt-6 text-stroke-3 pt-2'>Password Requirements</h3>

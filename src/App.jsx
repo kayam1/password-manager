@@ -4,17 +4,16 @@ import { useState, useEffect } from "react";
 import LoginPage from "./pages/LoginPage";
 import MainPage from "./pages/MainPage";
 import RegisterPage from "./pages/RegisterPage";
-import NotFoundPage from "./pages/NotFoundPage";
 
 import { getLoginState, hashAndSaltExists } from "./services/StorageManager";
 
 export default function App() {
-  //We assume not logged in and still loading
+  //Assume not logged in and still loading
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [hasMasterPassword, setHasMasterPassword] = useState(false);
 
-  //When the app first starts, check storage THIS RUNS FIRST!!!
+  //When the app first starts check storage (this runs first)
   useEffect(() => {
     async function loadData() {
     const mPasswordState = await hashAndSaltExists();
@@ -30,7 +29,7 @@ export default function App() {
       setIsLoading(false);
     }
     loadData();
-  }, []); //Empty array = only run this once at the start
+  }, []); //Empty array to only run useEffect once
 
   // While loading show nothing
   if (isLoading) {

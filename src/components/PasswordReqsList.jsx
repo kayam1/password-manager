@@ -1,6 +1,5 @@
 
   export default function PasswordRequirementsList({upperCount, lowerCount, numCount, symbolCount, isValidLength, isSamePassword}) {
-    console.log(upperCount, lowerCount, numCount, symbolCount, isValidLength, isSamePassword);
     function getIcon(condition) {
       return condition ? "✓" : "✗";
     }

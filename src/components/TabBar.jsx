@@ -11,9 +11,24 @@ export default function TabBar({ activeTab, setActiveTab }) {
   return (
     <div className="border-t-2 border-secondary z-0">
       <div className="flex w-full pt-1">   
-        <button className={`flex-1 py-2 px-4 text-sm font-bold transition-colors transition-speed ${getTabClass("generator")}`} onClick={() => setActiveTab("generator")}><strong>Generator</strong></button>
-        <button className={`flex-1 py-2 px-4 text-sm font-bold transition-colors ${getTabClass("vault")}`} onClick={() => setActiveTab("vault")}>Vault</button>
-        <button className={`flex-1 py-2 px-4 text-sm font-bold transition-colors ${getTabClass("settings")}`} onClick={() => setActiveTab("settings")}>Settings</button>
+        <button 
+          className={`flex-1 py-2 px-4 text-sm font-bold transition-colors transition-speed ${getTabClass("addPassword")}`} 
+          onClick={() => setActiveTab("addPassword")}
+        >
+          Add Password
+        </button>
+        <button 
+          className={`flex-1 py-2 px-4 text-sm font-bold transition-colors ${getTabClass("vault")}`} 
+          onClick={() => setActiveTab("vault")}
+        >
+          Vault
+        </button>
+        <button 
+          className={`flex-1 py-2 px-4 text-sm font-bold transition-colors ${getTabClass("settings")}`} 
+          onClick={() => setActiveTab("settings")}
+        >
+          Settings
+        </button>
       </div>
     </div>
   );

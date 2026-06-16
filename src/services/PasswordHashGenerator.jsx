@@ -5,7 +5,8 @@ export default async function generateHashAndSalt(password) {
   //Generating CryptoKey
   const encoder = new TextEncoder();
   const passwordData = encoder.encode(password); //String to Binary Array
-  const myCryptoKey = await crypto.subtle.importKey("raw", passwordData, "PBKDF2", false, ["deriveBits"]);	//generate key for the PBKDF2 hashing algorithm using password data
+  //generating key for the PBKDF2 hashing algorithm using password data
+  const myCryptoKey = await crypto.subtle.importKey("raw", passwordData, "PBKDF2", false, ["deriveBits"]);	
 
   //Generating Unique Salt 
   const salt = crypto.getRandomValues(new Uint8Array(16)); //Initializing 16 byte Binary Array

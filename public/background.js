@@ -1,4 +1,5 @@
 chrome.runtime.onInstalled.addListener(() => {
-    // This line is the magic key that unlocks session storage for your popup
+    //Gets session storage permissions
     chrome.storage.session.setAccessLevel({ accessLevel: 'TRUSTED_AND_UNTRUSTED_CONTEXTS' });
 });
+

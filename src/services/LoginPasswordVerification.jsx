@@ -5,11 +5,12 @@ export default async function loginPasswordIsVerified(password, hash, salt) {
   //Generating CryptoKey
   const encoder = new TextEncoder();
   const passwordData = encoder.encode(password); //String to Binary Array
-  const myCryptoKey = await crypto.subtle.importKey("raw", passwordData, "PBKDF2", false, ["deriveBits"]);	//generate key for the PBKDF2 hashing algorithm using password data
+	//generate key for the PBKDF2 hashing algorithm using password data
+  const myCryptoKey = await crypto.subtle.importKey("raw", passwordData, "PBKDF2", false, ["deriveBits"]);	
 
-	const saltBytes = Uint8Array.fromBase64(salt);
+	const saltBytes = Uint8Array.fromBase64(salt); //BASE64 string for storage
 
-  //Generating the password Hash and storing it in extension local storage
+  //Generate password Hash
   const myHash = await crypto.subtle.deriveBits( 
 		{
 			name: "PBKDF2",
@@ -23,8 +24,5 @@ export default async function loginPasswordIsVerified(password, hash, salt) {
   const hashBytes = new Uint8Array(myHash);
   const hashBase64 = hashBytes.toBase64(); //BASE64 string for storage
 
-	if (hashBase64 == hash)
-  	return true;
-	else
-		return false;
+return hashBase64 == hash ? true : false;
 }

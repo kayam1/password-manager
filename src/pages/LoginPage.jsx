@@ -41,8 +41,8 @@ export default function LoginPage() {
               onChange={(event) => setPassword(event.target.value)}
               maxlength="64"
             />
-            <MyButton className='mt-3' text="Sign in" />
-          <p className='error font-bold mt-15 text-center'>{errorMsg}</p>
+            <MyButton className='mt-3' text="Sign in" type="submit" />
+          <p className='text-error font-bold mt-15 text-center'>{errorMsg}</p>
         </form>
       </div>
       <footer className="footer sm:footer-horizontal border-primary footer-center p-4 border-t-2">

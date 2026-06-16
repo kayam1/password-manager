@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TabBar from "../components/TabBar";
-import PasswordGeneratorPage from "./PasswordGeneratorPage";
+import AddPasswordPage from "./AddPasswordPage"
 import SettingsPage from "./SettingPage";
 import VaultPage from "./VaultPage";
 
@@ -11,11 +11,11 @@ export default function MainPage() {
   if (activeTab === "vault") {
     pageToLoad = <VaultPage />;
   }
-  else if (activeTab === "generator") {
-    pageToLoad = <PasswordGeneratorPage />;
+  else if (activeTab === "addPassword") {
+    pageToLoad = <AddPasswordPage setActiveTab={setActiveTab}/>;
   }
   else {
-    pageToLoad = <SettingsPage />;
+    pageToLoad = <SettingsPage setActiveTab={setActiveTab}/>;
   }
   
   return (
