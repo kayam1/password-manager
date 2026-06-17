@@ -3,9 +3,9 @@
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
 📖 Table of Contents
 
-    Overview
+   * Overview
 
-    Key Features
+   * Key Features
 
     Technologies Used
 
@@ -28,7 +28,9 @@ A secure, feature-rich password manager built as a Chrome extension using React.
 This project is a fully functional password manager browser extension. It allows users to securely store login credentials, manage their vault, and maintain strong security practices—all from a convenient popup window directly in the browser.
 
 Built with a focus on security, usability, and modular code organization, the extension combines the power of React with Chrome's extension APIs to deliver a smooth, responsive experience.
+
 ✨ Key Features
+
 🔑 Authentication
 
     Master Password Setup – Create a strong master password during first-time use with real-time validation
