@@ -7,21 +7,21 @@ A secure, feature-rich password manager built as a Chrome extension using React.
 
    * Key Features
 
-    Technologies Used
+   * Technologies Used
 
-    Security
+   * Security
 
-    Project Structure
+   * Project Structure
 
-    Installation & Setup
+   * Installation & Setup
 
-    Usage Guide
+   * Usage Guide
 
-    Screenshots
+   * Screenshots
 
-    Future Improvements
+   * Future Improvements
 
-    License
+   * License
 
 📌 Overview
 
@@ -37,21 +37,21 @@ Built with a focus on security, usability, and modular code organization, the ex
 
     Secure Login – Authenticate using PBKDF2-hashed master password
 
-    Session Management – Stay logged in while the browser is open using Chrome's session storage
+    Session Management – Stay logged in while the browser is open using Chrome's session storage 
 
-    Logout – Securely end your session at any time
+    Logout – Securely end your session at any time or whenever the browser closes
 
 🗄️ Vault Management
 
-    View Entries – Display all saved credentials in a clean, sortable table
+    View Entries – Display all saved credentials in a clean and minimalistic table format
 
     Add New Entries – Store website, username, and password
 
-    Edit Entries – Update existing credentials via an intuitive modal
+    Edit Entries – Update existing credentials via an intuitive popup
 
     Delete Entries – Remove entries with confirmation dialog to prevent accidental loss
 
-    Password Masking – Passwords are hidden by default in the vault table; reveal individually in the edit modal
+    Password Masking – Passwords are hidden by default in the vault table; reveal individually in popup
 
     Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
 
@@ -86,6 +86,7 @@ DaisyUI	Pre-built UI components (buttons, tables, modals)
 Chrome Extensions API	Storage, session management
 Web Crypto API	PBKDF2 password hashing
 React Router	Navigation between pages
+
 🔐 Security
 
 This extension implements multiple layers of security:
