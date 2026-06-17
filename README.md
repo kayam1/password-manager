@@ -1,7 +1,7 @@
-🔐 ###Password Manager - Chrome Extension
+###🔐 Password Manager - Chrome Extension
 
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
-📖 ##Table of Contents
+##📖 Table of Contents
 
    * Overview
 
@@ -23,15 +23,15 @@ A secure, feature-rich password manager built as a Chrome extension using React.
 
    * License
 
-📌 ##Overview
+##📌 Overview
 
 This project is a fully functional password manager browser extension. It allows users to securely store login credentials, manage their vault, and maintain strong security practices—all from a convenient popup window directly in the browser.
 
 Built with a focus on security, usability, and modular code organization, the extension combines the power of React with Chrome's extension APIs to deliver a smooth, responsive experience.
 
-✨ ##Key Features
+##✨ Key Features
 
-🔑 #Authentication
+#🔑 Authentication
 
     Master Password Setup – Create a strong master password during first-time use with real-time validation
 
@@ -41,7 +41,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
     Logout – Securely end your session at any time or whenever the browser closes
 
-🗄️ #Vault Management
+#🗄️ Vault Management
 
     View Entries – Display all saved credentials in a clean and minimalistic table format
 
@@ -55,7 +55,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
     Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
 
-⚙️ #Settings
+#⚙️ Settings
 
     Clear All Vault Data – Remove all saved passwords with confirmation
 
@@ -63,7 +63,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
     Sign Out – End the current session securely
 
-🛡️ #Security Features
+#🛡️ Security Features
 
     PBKDF2 Key Derivation – 600,000 iterations with SHA-256
 
@@ -77,7 +77,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
     Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
 
-# 💻 Technologies Used
+#💻 Technologies Used
 
 | Technology | Purpose |
 |------------|---------|
@@ -89,7 +89,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 | **Web Crypto API** | PBKDF2 password hashing |
 | **React Router** | Navigation between pages |
 
-🔐 ##Security
+##🔐 Security
 
 This extension implements multiple layers of security:
 Master Password Hashing
