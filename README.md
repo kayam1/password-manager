@@ -1,54 +1,307 @@
-***
+🔐 Password Manager - Chrome Extension
 
-# Password Manager Chrome Extension
+A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
+📖 Table of Contents
 
-## Overview
-Password Manager is a clean and compact Chrome browser extension built with React, Vite, and Tailwind CSS. It allows users to securely save and manage their passwords in an encrypted vault. The extension utilizes a Master Password system that secures your vault using PBKDF2 hashing, ensuring your data remains protected locally.
+    Overview
 
-### Features
-- **Master Password Protection**: Secure your entire vault with a single, highly-secure master password.
-- **Local Vault**: Store website domains, usernames, and passwords directly in your browser using Chrome's local storage APIs. 
-- **Modern UI**: A minimal, easy-to-use interface powered by Tailwind CSS and DaisyUI.
-- **Password Requirements Validation**: Built-in validators to ensure your master password is as secure as possible.
+    Key Features
 
-## Installation
+    Technologies Used
 
-Because this is a React-based Chrome Extension created with Vite, you will need to build the project before loading it into your browser.
+    Security
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) and `npm` installed on your machine.
+    Project Structure
 
-### Build Instructions
+    Installation & Setup
 
-1. **Clone the repository and navigate into the project directory:**
-```bash
-git clone <repository-url>
-cd password-manager
-```
+    Usage Guide
 
-2. **Install the dependencies:**
-```bash
-npm install
-```
+    Screenshots
 
-3. **Build the extension:**
-```bash
-npm run build
-```
-   *This command compiles the React application and generates a dist folder containing the final extension files (including the manifest.json).*
+    Future Improvements
 
-### Adding the Extension to Chrome
+    License
 
-1. Open Google Chrome and type chrome://extensions/ into your address bar.
-2. Enable **Developer mode** using the toggle switch in the top right corner.
-3. Click the **Load unpacked** button in the top left corner.
-4. Select the dist folder that was generated inside your project directory.
-5. Pin the extension to your browser toolbar for quick access! 
+📌 Overview
 
-## Technologies Used
-* **React 19**
-* **Vite**
-* **Tailwind CSS 4 & DaisyUI**
-* **Chrome Extension API** (chrome.storage.local / chrome.storage.session`)
-Web Crypto API (For PBKDF2 hashing)
-``` 
+This project is a fully functional password manager browser extension. It allows users to securely store login credentials, manage their vault, and maintain strong security practices—all from a convenient popup window directly in the browser.
+
+Built with a focus on security, usability, and modular code organization, the extension combines the power of React with Chrome's extension APIs to deliver a smooth, responsive experience.
+✨ Key Features
+🔑 Authentication
+
+    Master Password Setup – Create a strong master password during first-time use with real-time validation
+
+    Secure Login – Authenticate using PBKDF2-hashed master password
+
+    Session Management – Stay logged in while the browser is open using Chrome's session storage
+
+    Logout – Securely end your session at any time
+
+🗄️ Vault Management
+
+    View Entries – Display all saved credentials in a clean, sortable table
+
+    Add New Entries – Store website, username, and password
+
+    Edit Entries – Update existing credentials via an intuitive modal
+
+    Delete Entries – Remove entries with confirmation dialog to prevent accidental loss
+
+    Password Masking – Passwords are hidden by default in the vault table; reveal individually in the edit modal
+
+    Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
+
+⚙️ Settings
+
+    Clear All Vault Data – Remove all saved passwords with confirmation
+
+    Reset Master Password – Re-initialize the vault with a new master password
+
+    Sign Out – End the current session securely
+
+🛡️ Security Features
+
+    PBKDF2 Key Derivation – 600,000 iterations with SHA-256
+
+    Unique Salt per User – Prevents rainbow table attacks
+
+    Chrome Storage API – Data stored securely within the extension's isolated storage
+
+    Session Storage – Login state cleared when browser closes
+
+    Real-Time Password Validation – Instant feedback on password strength during registration
+
+    Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
+
+💻 Technologies Used
+Technology	Purpose
+React.js	UI components & state management
+JavaScript (ES6+)	Core application logic
+Tailwind CSS	Utility-first styling
+DaisyUI	Pre-built UI components (buttons, tables, modals)
+Chrome Extensions API	Storage, session management
+Web Crypto API	PBKDF2 password hashing
+React Router	Navigation between pages
+🔐 Security
+
+This extension implements multiple layers of security:
+Master Password Hashing
+
+    Algorithm: PBKDF2-HMAC-SHA256
+
+    Iterations: 600,000 (recommended for 2026)
+
+    Salt: 16-byte randomly generated salt per user
+
+    Storage: Salt and hash stored separately in chrome.storage.local
+
+Data Protection
+
+    Vault data stored in Chrome's isolated storage (not accessible by websites)
+
+    Passwords hidden by default in the vault table
+
+    Session state stored in chrome.storage.session (cleared on browser close)
+
+    Master password never stored in plaintext
+
+Security Design Principles
+
+    No plaintext password storage
+
+    No external database or cloud sync (all data local)
+
+    Extension isolation prevents cross-site access
+
+📁 Project Structure
+text
+
+src/
+├── components/
+│   ├── Button.jsx
+│   ├── PasswordField.jsx      # Input with visibility toggle
+│   ├── PasswordRequirementsList.jsx
+│   ├── TabBar.jsx
+│   ├── VaultSettingsSVG.jsx
+│   ├── OpenEyeSVG.jsx
+│   ├── ClosedEyeSVG.jsx
+│   ├── SimpleModal.jsx
+│   └── VaultOperationsModal.jsx
+│
+├── pages/
+│   ├── LoginPage.jsx
+│   ├── RegisterPage.jsx
+│   ├── MainPage.jsx
+│   ├── VaultPage.jsx
+│   ├── AddPasswordPage.jsx
+│   └── SettingsPage.jsx
+│
+├── hooks/
+│   └── usePasswordRequirementsValidator.js
+│
+├── services/
+│   ├── StorageManager.jsx      # Chrome storage operations
+│   └── PasswordHashGenerator.jsx # PBKDF2 hashing
+│
+├── App.jsx
+└── index.css
+
+🛠️ Installation & Setup
+Prerequisites
+
+    Node.js (v16 or higher)
+
+    Chrome browser
+
+Development Setup
+
+    Clone the repository
+    bash
+
+    git clone <repository-url>
+    cd password-manager-extension
+
+    Install dependencies
+    bash
+
+    npm install
+
+    Run development server
+    bash
+
+    npm run dev
+
+    Build for production
+    bash
+
+    npm run build
+
+Loading the Extension in Chrome
+
+    Open Chrome and navigate to chrome://extensions/
+
+    Enable Developer mode (toggle in top-right)
+
+    Click Load unpacked
+
+    Select the dist/ or build/ folder from your project
+
+    The extension icon should appear in the toolbar
+
+🎯 Usage Guide
+First-Time Setup
+
+    Click the extension icon in the Chrome toolbar
+
+    You'll be directed to the Register Page
+
+    Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
+
+    Confirm the password and click Register
+
+    The vault will open automatically
+
+Logging In
+
+    Enter your master password
+
+    Click Sign In
+
+    You'll be redirected to the main vault
+
+Managing Passwords
+
+    Navigate to the Vault tab
+
+    Click the settings icon (⚙️) on any entry
+
+    Choose View, Edit, or Delete
+
+    Use the Add Password tab to create new entries
+
+📸 Screenshots
+
+(Include screenshots of: Login Page, Register Page, Vault Table, Add Password Form, Settings Page, Confirmation Modal)
+🚀 Future Improvements
+
+While the extension is fully functional, the following enhancements are planned for future development:
+Password Generator
+
+    Customizable Generation – Create strong, random passwords with configurable length and character sets
+
+    One-Click Copy – Copy generated passwords to clipboard with a single click
+
+Vault Enhancements
+
+    Entry Encryption – Encrypt individual vault entries for an additional layer of security
+
+    Bulk Visibility Toggle – Show/hide all passwords in the vault table with one button
+
+    One-Click Copy – Copy usernames or passwords directly from the vault table
+
+    Search & Filter – Quickly find entries by website or username
+
+    Password Strength Indicator – Visual feedback on password strength within the vault
+
+Security Upgrades
+
+    Argon2 Password Hashing – Replace PBKDF2 with the more modern, memory-hard Argon2 algorithm
+
+    Biometric Authentication – Support for fingerprint or face recognition
+
+    Two-Factor Authentication (2FA) – Add an extra layer of security
+
+    Auto-Lock Timer – Automatically lock the vault after inactivity
+
+Functional Additions
+
+    Cloud Sync – Synchronize vault across multiple devices (encrypted)
+
+    Import/Export – Bulk import/export vault data (CSV, JSON)
+
+    Breach Monitoring – Check if passwords have been exposed in data breaches
+
+    Dark Mode – Toggle between light and dark themes
+
+    Password Categories – Organize entries by folders or tags
+
+User Experience
+
+    Autofill – Auto-fill login forms on websites
+
+    Keyboard Shortcuts – Quick actions via keyboard shortcuts
+
+    Loading States – Show loading indicators during async operations
+
+    Enhanced Responsive Design – Better support for different screen sizes
+
+Technical Improvements
+
+    Code Splitting – Reduce initial bundle size
+
+    TypeScript – Add type safety to the codebase
+
+    Unit Tests – Implement testing for core functionality
+
+    Error Boundary – Graceful error handling
+
+    Better State Management – Consider using Redux or Zustand
+
+📄 License
+
+This project was developed as a university assignment. All rights reserved by the author.
+🙏 Acknowledgments
+
+    React.js Documentation
+
+    Chrome Extensions Documentation
+
+    Tailwind CSS
+
+    DaisyUI
+
+    Web Crypto API
+
+Built with ❤️ using React.js and Chrome Extensions API
