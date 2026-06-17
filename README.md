@@ -78,14 +78,15 @@ Built with a focus on security, usability, and modular code organization, the ex
     Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
 
 💻 Technologies Used
-Technology	Purpose
-React.js	UI components & state management
-JavaScript (ES6+)	Core application logic
-Tailwind CSS	Utility-first styling
-DaisyUI	Pre-built UI components (buttons, tables, modals)
-Chrome Extensions API	Storage, session management
-Web Crypto API	PBKDF2 password hashing
-React Router	Navigation between pages
+### Technologies Used
+
+- **React.js** – UI components & state management
+- **JavaScript (ES6+)** – Core application logic
+- **Tailwind CSS** – Utility-first styling
+- **DaisyUI** – Pre-built UI components
+- **Chrome Extensions API** – Storage, session management
+- **Web Crypto API** – PBKDF2 password hashing
+- **React Router** – Navigation between pages
 
 🔐 Security
 
