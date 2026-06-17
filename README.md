@@ -11,13 +11,9 @@ A secure, feature-rich password manager built as a Chrome extension using React.
 
    * Security
 
-   * Project Structure
-
    * Installation & Setup
 
    * Usage Guide
-
-   * Screenshots
 
    * Future Improvements
 
