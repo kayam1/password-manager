@@ -152,47 +152,47 @@ This extension implements multiple layers of security:
 
 ### 5.3 Loading the Extension in Chrome
 
-  1 - Open Chrome and navigate to chrome://extensions/
+ - 1 - Open Chrome and navigate to chrome://extensions/
 
-  2 - Enable Developer mode (toggle in top-right)
+ - 2 - Enable Developer mode (toggle in top-right)
 
-  3 - Click Load unpacked
+ - 3 - Click Load unpacked
 
-  4 - Select the dist/ or build/ folder from your project
+ - 4 - Select the dist/ or build/ folder from your project
 
-  5 - The extension icon should appear in the toolbar
+ - 5 - The extension icon should appear in the toolbar
 
 ## 🎯 6. Usage Guide
 
 ### 6.1 First-Time Setup
 
-  1 - Click the extension icon in the Chrome toolbar
+ - 1 - Click the extension icon in the Chrome toolbar
 
-  2 - You'll be directed to the Register Page
+ - 2 - You'll be directed to the Register Page
 
-  3 - Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
+ - 3 - Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
 
-  4 - Confirm the password and click Register
+ - 4 - Confirm the password and click Register
 
-  5 - The vault will open automatically
+ - 5 - The vault will open automatically
 
 ### 6.2 Logging In
 
-  1 - Enter your master password
+ - 1 - Enter your master password
 
-  2 - Click Sign In
+ - 2 - Click Sign In
 
-  3 - You'll be redirected to the main vault
+ - 3 - You'll be redirected to the main vault
 
 ### 6.3 Managing Passwords
 
-  1 - Navigate to the Vault tab
+ - 1 - Navigate to the Vault tab
 
-  2 - Click the settings icon (⚙️) on any entry
+ - 2 - Click the settings icon (⚙️) on any entry
 
-  3 - Choose View, Edit, or Delete
+ - 3 - Choose View, Edit, or Delete
 
-  4 - Use the Add Password tab to create new entries
+ - 4 - Use the Add Password tab to create new entries
 
 ## 🚀 7. Future Improvements
 
