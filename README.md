@@ -88,7 +88,8 @@ Built with a focus on security, usability, and modular code organization, the ex
 ## 🔐 4. Security
 
 This extension implements multiple layers of security:
-Master Password Hashing
+
+### 4.1 Master Password Hashing
 
   * Algorithm: PBKDF2-HMAC-SHA256
 
@@ -98,7 +99,7 @@ Master Password Hashing
 
   * Storage: Salt and hash stored separately in chrome.storage.local
 
-### 4.1 Data Protection
+### 4.2 Data Protection
 
   * Vault data stored in Chrome's isolated storage (not accessible by websites)
     
@@ -108,7 +109,7 @@ Master Password Hashing
 
   * Master password never stored in plaintext
 
-### 4.2 Security Design Principles
+### 4.3 Security Design Principles
 
   * No plaintext password storage
 
