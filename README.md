@@ -129,17 +129,20 @@ Master Password Hashing
   * Clone the repository
 
     bash
+    
     git clone [<repository-url>](https://github.com/kayam1/password-manager)
     cd password-manager-extension
 
   * Install dependencies
 
     bash
+    
     npm install
 
   * Build project
     
     bash
+    
     npm run build
 
 ### Loading the Extension in Chrome
