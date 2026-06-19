@@ -127,22 +127,22 @@ This extension implements multiple layers of security:
 
 ### 5.2 Clone & Build
   
-  #### Clone the repository
+   #### Clone the repository
 
    ```bash
    git clone [<repository-url>](https://github.com/kayam1/password-manager)
    ```
-   Move to installation directory
+   #### Move to installation directory
     
    ```bash
    cd password-manager-extension
    ```
-   Install dependencies
+   #### Install dependencies
 
    ```bash
    npm install
    ```
-   Build project
+   #### Build project
     
    ```bash
    npm run build
