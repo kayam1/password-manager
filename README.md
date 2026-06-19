@@ -129,71 +129,67 @@ This extension implements multiple layers of security:
   
    1. Clone the repository
 
-    ```bash
-    
-    git clone [<repository-url>](https://github.com/kayam1/password-manager)
-
+   ```bash
+   git clone [<repository-url>](https://github.com/kayam1/password-manager)
+   ```
    2. Move to installation directory
     
-    ```bash
-    cd password-manager-extension
-
+   ```bash
+   cd password-manager-extension
+   ```
    3. Install dependencies
 
-    ```bash
-    
-    npm install
-
+   ```bash
+   npm install
+   ```
    4. Build project
     
-    ```bash
-    
-    npm run build
-
+   ```bash
+   npm run build
+   ```
 ### 5.3 Loading the Extension in Chrome
 
+   * Open Chrome and navigate to chrome://extensions/
 
- > 1 - Open Chrome and navigate to chrome://extensions/
+   * Enable Developer mode (toggle in top-right)
 
- > 2 - Enable Developer mode (toggle in top-right)
+   * Click Load unpacked
 
- > 3 - Click Load unpacked
+   * Select the dist/ or build/ folder from your project
 
- > 4 - Select the dist/ or build/ folder from your project
-
- > 5 - The extension icon should appear in the toolbar
+   * The extension icon should appear in the toolbar
 
 ## 🎯 6. Usage Guide
 
 ### 6.1 First-Time Setup
 
- > 1 - Click the extension icon in the Chrome toolbar
+   * Click the extension icon in the Chrome toolbar
 
- > 2 - You'll be directed to the Register Page
+   * You'll be directed to the Register Page
 
- > 3 - Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
+   * Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
 
- > 4 - Confirm the password and click Register
+   * Confirm the password and click Register
 
- > 5 - The vault will open automatically
+   * The vault will open automatically
 
 ### 6.2 Logging In
 
- > 1 - Enter your master password
+   * Enter your master password
 
- > 2 - Click Sign In
+   * Click Sign In
 
- > 3 - You'll be redirected to the main vault
+   * You'll be redirected to the main vault
 
 ### 6.3 Managing Passwords
 
- > 1 - Navigate to the Vault tab
+   * Navigate to the Vault tab
 
- > 2 - Click the settings icon (⚙️) on any entry
+   * Click the settings icon (⚙️) on any entry
 
- > 3 - Choose View, Edit, or Delete
+   * Choose View, Edit, or Delete
 
- > 4 - Use the Add Password tab to create new entries
+   * Use the Add Password tab to create new entries
 
 ## 🚀 7. Future Improvements
 
