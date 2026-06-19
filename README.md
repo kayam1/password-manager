@@ -29,49 +29,49 @@ Built with a focus on security, usability, and modular code organization, the ex
 
 ### 🔑 2.1 Authentication
 
-  * Master Password Setup – Create a strong master password during first-time use with real-time validation
+   * Master Password Setup – Create a strong master password during first-time use with real-time validation
 
-  * Secure Login – Authenticate using PBKDF2-hashed master password
+   * Secure Login – Authenticate using PBKDF2-hashed master password
 
-  * Session Management – Stay logged in while the browser is open using Chrome's session storage 
+   * Session Management – Stay logged in while the browser is open using Chrome's session storage 
 
-  * Logout – Securely end your session at any time or whenever the browser closes
+   * Logout – Securely end your session at any time or whenever the browser closes
 
 ### 🗄️ 2.2 Vault Management
 
-  * View Entries – Display all saved credentials in a clean and minimalistic table format
+   * View Entries – Display all saved credentials in a clean and minimalistic table format
+   
+   * Add New Entries – Store website, username, and password
 
-  * Add New Entries – Store website, username, and password
+   * Edit Entries – Update existing credentials via an intuitive popup
 
-  * Edit Entries – Update existing credentials via an intuitive popup
+   * Delete Entries – Remove entries with confirmation dialog to prevent accidental loss
 
-  * Delete Entries – Remove entries with confirmation dialog to prevent accidental loss
+   * Password Masking – Passwords are hidden by default in the vault table; reveal individually in popup
 
-  * Password Masking – Passwords are hidden by default in the vault table; reveal individually in popup
-
-  * Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
+   * Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
 
 ### ⚙️ 2.3 Settings
 
-  * Clear All Vault Data – Remove all saved passwords with confirmation
+   * Clear All Vault Data – Remove all saved passwords with confirmation
 
-  * Reset Master Password – Re-initialize the vault with a new master password
+   * Reset Master Password – Re-initialize the vault with a new master password
 
-  * Sign Out – End the current session securely
+   * Sign Out – End the current session securely
 
 ### 🛡️ 2.4 Security Features
 
-  * PBKDF2 Key Derivation – 600,000 iterations with SHA-256
+   * PBKDF2 Key Derivation – 600,000 iterations with SHA-256
 
-  * Unique Salt per User – Prevents rainbow table attacks
+   * Unique Salt per User – Prevents rainbow table attacks
 
-  * Chrome Storage API – Data stored securely within the extension's isolated storage
+   * Chrome Storage API – Data stored securely within the extension's isolated storage
 
-  * Session Storage – Login state cleared when browser closes
+   * Session Storage – Login state cleared when browser closes
 
-  * Real-Time Password Validation – Instant feedback on password strength during registration
+   * Real-Time Password Validation – Instant feedback on password strength during registration
 
-  * Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
+   * Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
 
 ### 💻 3. Technologies Used
 
@@ -91,56 +91,60 @@ This extension implements multiple layers of security:
 
 ### 4.1 Master Password Hashing
 
-  * Algorithm: PBKDF2-HMAC-SHA256
+   * Algorithm: PBKDF2-HMAC-SHA256
 
-  * Iterations: 600,000 (recommended for 2026)
+   * Iterations: 600,000 (recommended for 2026)
 
-  * Salt: 16-byte randomly generated salt per user
+   * Salt: 16-byte randomly generated salt per user
 
-  * Storage: Salt and hash stored separately in chrome.storage.local
+   * Storage: Salt and hash stored separately in chrome.storage.local
 
 ### 4.2 Data Protection
 
-  * Vault data stored in Chrome's isolated storage (not accessible by websites)
+   * Vault data stored in Chrome's isolated storage (not accessible by websites)
     
-  * Passwords hidden by default in the vault table
+   * Passwords hidden by default in the vault table
 
    * Session state stored in chrome.storage.session (cleared on browser close)
 
-  * Master password never stored in plaintext
+   * Master password never stored in plaintext
 
 ### 4.3 Security Design Principles
 
-  * No plaintext password storage
+   * No plaintext password storage
 
-  * No external database or cloud sync (all data local)
+   * No external database or cloud sync (all data local)
 
-  * Extension isolation prevents cross-site access
+   * Extension isolation prevents cross-site access
 
 ## 🛠️ 5. Installation & Setup
 
 ### 5.1 Prerequisites
 
-  * Node.js (v16 or higher)
+   * Node.js (v16 or higher)
 
-  * Chrome browser
+   * Chrome browser
 
-### 5.2 Development Setup
+### 5.2 Clone & Build
   
-  Clone the repository
+  1. Clone the repository
 
     ```bash
     
     git clone [<repository-url>](https://github.com/kayam1/password-manager)
+
+  2. Move to installation directory
+    
+    ```bash
     cd password-manager-extension
 
-  Install dependencies
+  3. Install dependencies
 
     ```bash
     
     npm install
 
-  Build project
+  4. Build project
     
     ```bash
     
@@ -148,15 +152,15 @@ This extension implements multiple layers of security:
 
 ### 5.3 Loading the Extension in Chrome
 
-  * Open Chrome and navigate to chrome://extensions/
+  1 - Open Chrome and navigate to chrome://extensions/
 
-  * Enable Developer mode (toggle in top-right)
+  2 - Enable Developer mode (toggle in top-right)
 
-  * Click Load unpacked
+  3 - Click Load unpacked
 
-  * Select the dist/ or build/ folder from your project
+  4 - Select the dist/ or build/ folder from your project
 
-  * The extension icon should appear in the toolbar
+  5 - The extension icon should appear in the toolbar
 
 ## 🎯 6. Usage Guide
 
