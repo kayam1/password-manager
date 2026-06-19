@@ -3,31 +3,31 @@
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
 ## 📖 Table of Contents
 
-   * Overview
+   1. Overview
 
-   * Key Features
+   2. Key Features
 
-   * Technologies Used
+   3. Technologies Used
 
-   * Security
+   4. Security
 
-   * Installation & Setup
+   5. Installation & Setup
 
-   * Usage Guide
+   6. Usage Guide
 
-   * Future Improvements
+   7. Future Improvements
 
-   * License
+   8. License
 
-## 📌 Overview
+## 📌 1. Overview
 
 This project is a fully functional password manager browser extension. It allows users to securely store login credentials, manage their vault, and maintain strong security practices—all from a convenient popup window directly in the browser.
 
 Built with a focus on security, usability, and modular code organization, the extension combines the power of React with Chrome's extension APIs to deliver a smooth, responsive experience.
 
-## ✨ Key Features
+## ✨ 2. Key Features
 
-### 🔑 Authentication
+### 🔑 2.1 Authentication
 
   * Master Password Setup – Create a strong master password during first-time use with real-time validation
 
@@ -37,7 +37,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
   * Logout – Securely end your session at any time or whenever the browser closes
 
-### 🗄️ Vault Management
+### 🗄️ 2.2 Vault Management
 
   * View Entries – Display all saved credentials in a clean and minimalistic table format
 
@@ -51,7 +51,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
   * Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
 
-### ⚙️ Settings
+### ⚙️ 2.3 Settings
 
   * Clear All Vault Data – Remove all saved passwords with confirmation
 
@@ -59,7 +59,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
   * Sign Out – End the current session securely
 
-### 🛡️ Security Features
+### 🛡️ 2.4 Security Features
 
   * PBKDF2 Key Derivation – 600,000 iterations with SHA-256
 
@@ -73,7 +73,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 
   * Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
 
-### 💻 Technologies Used
+### 💻 3. Technologies Used
 
 | Technology | Purpose |
 |------------|---------|
@@ -85,7 +85,7 @@ Built with a focus on security, usability, and modular code organization, the ex
 | **Web Crypto API** | PBKDF2 password hashing |
 | **React Router** | Navigation between pages |
 
-## 🔐 Security
+## 🔐 4. Security
 
 This extension implements multiple layers of security:
 Master Password Hashing
@@ -98,7 +98,7 @@ Master Password Hashing
 
   * Storage: Salt and hash stored separately in chrome.storage.local
 
-### Data Protection
+### 4.1 Data Protection
 
   * Vault data stored in Chrome's isolated storage (not accessible by websites)
     
@@ -108,7 +108,7 @@ Master Password Hashing
 
   * Master password never stored in plaintext
 
-### Security Design Principles
+### 4.2 Security Design Principles
 
   * No plaintext password storage
 
@@ -116,36 +116,36 @@ Master Password Hashing
 
   * Extension isolation prevents cross-site access
 
-## 🛠️ Installation & Setup
+## 🛠️ 5. Installation & Setup
 
-### Prerequisites
+### 5.1 Prerequisites
 
   * Node.js (v16 or higher)
 
   * Chrome browser
 
-### Development Setup
-
-  * Clone the repository
+### 5.2 Development Setup
+  
+  Clone the repository
 
     ```bash
     
     git clone [<repository-url>](https://github.com/kayam1/password-manager)
     cd password-manager-extension
 
-  * Install dependencies
+  Install dependencies
 
     ```bash
     
     npm install
 
-  * Build project
+  Build project
     
     ```bash
     
     npm run build
 
-### Loading the Extension in Chrome
+### 5.3 Loading the Extension in Chrome
 
   * Open Chrome and navigate to chrome://extensions/
 
@@ -157,48 +157,49 @@ Master Password Hashing
 
   * The extension icon should appear in the toolbar
 
-## 🎯 Usage Guide
-First-Time Setup
+## 🎯 6. Usage Guide
 
-  * Click the extension icon in the Chrome toolbar
+### 6.1 First-Time Setup
 
-  * You'll be directed to the Register Page
+  1 - Click the extension icon in the Chrome toolbar
 
-  * Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
+  2 - You'll be directed to the Register Page
 
-  * Confirm the password and click Register
+  3 - Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
 
-  * The vault will open automatically
+  4 - Confirm the password and click Register
 
-### Logging In
+  5 - The vault will open automatically
 
-  * Enter your master password
+### 6.2 Logging In
 
-  * Click Sign In
+  1 - Enter your master password
 
-  * You'll be redirected to the main vault
+  2 - Click Sign In
 
-### Managing Passwords
+  3 - You'll be redirected to the main vault
 
-  * Navigate to the Vault tab
+### 6.3 Managing Passwords
 
-  * Click the settings icon (⚙️) on any entry
+  1 - Navigate to the Vault tab
 
-  * Choose View, Edit, or Delete
+  2 - Click the settings icon (⚙️) on any entry
 
-  * Use the Add Password tab to create new entries
+  3 - Choose View, Edit, or Delete
 
-## 🚀 Future Improvements
+  4 - Use the Add Password tab to create new entries
+
+## 🚀 7. Future Improvements
 
 While the extension is fully functional, the following enhancements are planned for future development:
 
-### Password Generator
+### 7.1 Password Generator
 
   * Customizable Generation – Create strong, random passwords with configurable length and character sets
 
   * One-Click Copy – Copy generated passwords to clipboard with a single click
 
-### Vault Enhancements
+### 7.2 Vault Enhancements
 
   * Bulk Visibility Toggle – Show/hide all passwords in the vault table with one button
 
@@ -208,7 +209,7 @@ While the extension is fully functional, the following enhancements are planned 
 
   * Password Strength Indicator – Visual feedback on password strength within the vault
 
-### Security Upgrades
+### 7.3 Security Upgrades
 
   * Vault Entry Encryption – Encrypt vault data for an additional layer of security
     
@@ -216,13 +217,13 @@ While the extension is fully functional, the following enhancements are planned 
 
   * Auto-Lock Timer – Automatically lock the vault after inactivity
 
-### Functional Additions
+### 7.4 Functional Additions
 
   * Import/Export – Bulk import/export vault data (CSV, JSON)
 
   * Dark Mode – Toggle between light and dark themes
 
-### User Experience
+### 7.5 User Experience
 
   * Autofill – Auto-fill login forms on websites
 
@@ -231,7 +232,7 @@ While the extension is fully functional, the following enhancements are planned 
   * Loading States – Show loading indicators during async operations
 
 
-## 📄 License
+## 📄 8. License
 
 All rights reserved by the author.
 
