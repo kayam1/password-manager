@@ -3,21 +3,21 @@
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
 ## 📖 Table of Contents
 
-  - 1. Overview
+   1. Overview
 
-  - 2. Key Features
+   2. Key Features
 
-  - 3. Technologies Used
+   3. Technologies Used
 
-  - 4. Security
+   4. Security
 
-  - 5. Installation & Setup
+   5. Installation & Setup
 
-  - 6. Usage Guide
+   6. Usage Guide
 
-  - 7. Future Improvements
+   7. Future Improvements
 
-  - 8. License
+   8. License
 
 ## 📌 1. Overview
 
@@ -127,24 +127,24 @@ This extension implements multiple layers of security:
 
 ### 5.2 Clone & Build
   
-  - 1. Clone the repository
+   1. Clone the repository
 
     ```bash
     
     git clone [<repository-url>](https://github.com/kayam1/password-manager)
 
-  - 2. Move to installation directory
+   2. Move to installation directory
     
     ```bash
     cd password-manager-extension
 
-  - 3. Install dependencies
+   3. Install dependencies
 
     ```bash
     
     npm install
 
-  - 4. Build project
+   4. Build project
     
     ```bash
     
