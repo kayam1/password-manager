@@ -3,11 +3,11 @@
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
 ## 📖 Table of Contents
 
-   * Overview
+   ** Overview
 
-   * Key Features
+   ** Key Features
 
-   * Technologies Used
+   ** Technologies Used
 
    * Security
 
@@ -126,7 +126,7 @@ Master Password Hashing
 
 ### Development Setup
 
-    Clone the repository
+*Clone the repository
     bash
 
     git clone <repository-url>
