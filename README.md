@@ -128,20 +128,20 @@ Master Password Hashing
 
   * Clone the repository
 
-    bash
+    ```bash
     
     git clone [<repository-url>](https://github.com/kayam1/password-manager)
     cd password-manager-extension
 
   * Install dependencies
 
-    bash
+    ```bash
     
     npm install
 
   * Build project
     
-    bash
+    ```bash
     
     npm run build
 
@@ -194,41 +194,41 @@ While the extension is fully functional, the following enhancements are planned 
 
 ### Password Generator
 
-    Customizable Generation – Create strong, random passwords with configurable length and character sets
+  * Customizable Generation – Create strong, random passwords with configurable length and character sets
 
-    One-Click Copy – Copy generated passwords to clipboard with a single click
+  * One-Click Copy – Copy generated passwords to clipboard with a single click
 
 ### Vault Enhancements
 
-    Bulk Visibility Toggle – Show/hide all passwords in the vault table with one button
+  * Bulk Visibility Toggle – Show/hide all passwords in the vault table with one button
 
-    One-Click Copy – Copy usernames or passwords directly from the vault table
+  * One-Click Copy – Copy usernames or passwords directly from the vault table
 
-    Search & Filter – Quickly find entries by website or username
+  * Search & Filter – Quickly find entries by website or username
 
-    Password Strength Indicator – Visual feedback on password strength within the vault
+  * Password Strength Indicator – Visual feedback on password strength within the vault
 
 ### Security Upgrades
 
-    Vault Entry Encryption – Encrypt vault data for an additional layer of security
+  * Vault Entry Encryption – Encrypt vault data for an additional layer of security
     
-    Two-Factor Authentication (2FA) – Add an extra layer of security
+  * Two-Factor Authentication (2FA) – Add an extra layer of security
 
-    Auto-Lock Timer – Automatically lock the vault after inactivity
+  * Auto-Lock Timer – Automatically lock the vault after inactivity
 
 ### Functional Additions
 
-    Import/Export – Bulk import/export vault data (CSV, JSON)
+  * Import/Export – Bulk import/export vault data (CSV, JSON)
 
-    Dark Mode – Toggle between light and dark themes
+  * Dark Mode – Toggle between light and dark themes
 
 ### User Experience
 
-    Autofill – Auto-fill login forms on websites
+  * Autofill – Auto-fill login forms on websites
 
-    Autosave - Automatically create vault entries on site login 
+  * Autosave - Automatically create vault entries on site login 
 
-    Loading States – Show loading indicators during async operations
+  * Loading States – Show loading indicators during async operations
 
 
 ## 📄 License
@@ -237,14 +237,14 @@ All rights reserved by the author.
 
 ## 🙏 Acknowledgments
 
-    React.js Documentation
+   * React.js Documentation
 
-    Chrome Extensions Documentation
+   * Chrome Extensions Documentation
 
-    Tailwind CSS
+   * Tailwind CSS
 
-    DaisyUI
+   * DaisyUI
 
-    Web Crypto API
+   * Web Crypto API
 
 ## Built with ❤️ using React.js and Chrome Extensions API
