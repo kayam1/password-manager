@@ -3,21 +3,21 @@
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
 ## 📖 Table of Contents
 
-   1. Overview
+  - 1. Overview
 
-   2. Key Features
+  - 2. Key Features
 
-   3. Technologies Used
+  - 3. Technologies Used
 
-   4. Security
+  - 4. Security
 
-   5. Installation & Setup
+  - 5. Installation & Setup
 
-   6. Usage Guide
+  - 6. Usage Guide
 
-   7. Future Improvements
+  - 7. Future Improvements
 
-   8. License
+  - 8. License
 
 ## 📌 1. Overview
 
