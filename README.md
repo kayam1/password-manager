@@ -3,11 +3,11 @@
 A secure, feature-rich password manager built as a Chrome extension using React.js. Store, manage, and protect your login credentials with peace of mind.
 ## 📖 Table of Contents
 
-   ** Overview
+   * Overview
 
-   ** Key Features
+   * Key Features
 
-   ** Technologies Used
+   * Technologies Used
 
    * Security
 
@@ -29,49 +29,49 @@ Built with a focus on security, usability, and modular code organization, the ex
 
 ### 🔑 Authentication
 
-    Master Password Setup – Create a strong master password during first-time use with real-time validation
+  * Master Password Setup – Create a strong master password during first-time use with real-time validation
 
-    Secure Login – Authenticate using PBKDF2-hashed master password
+  * Secure Login – Authenticate using PBKDF2-hashed master password
 
-    Session Management – Stay logged in while the browser is open using Chrome's session storage 
+  * Session Management – Stay logged in while the browser is open using Chrome's session storage 
 
-    Logout – Securely end your session at any time or whenever the browser closes
+  * Logout – Securely end your session at any time or whenever the browser closes
 
 ### 🗄️ Vault Management
 
-    View Entries – Display all saved credentials in a clean and minimalistic table format
+  * View Entries – Display all saved credentials in a clean and minimalistic table format
 
-    Add New Entries – Store website, username, and password
+  * Add New Entries – Store website, username, and password
 
-    Edit Entries – Update existing credentials via an intuitive popup
+  * Edit Entries – Update existing credentials via an intuitive popup
 
-    Delete Entries – Remove entries with confirmation dialog to prevent accidental loss
+  * Delete Entries – Remove entries with confirmation dialog to prevent accidental loss
 
-    Password Masking – Passwords are hidden by default in the vault table; reveal individually in popup
+  * Password Masking – Passwords are hidden by default in the vault table; reveal individually in popup
 
-    Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
+  * Inline Actions – Each entry has a settings button for quick access to view, edit, and delete
 
 ### ⚙️ Settings
 
-    Clear All Vault Data – Remove all saved passwords with confirmation
+  * Clear All Vault Data – Remove all saved passwords with confirmation
 
-    Reset Master Password – Re-initialize the vault with a new master password
+  * Reset Master Password – Re-initialize the vault with a new master password
 
-    Sign Out – End the current session securely
+  * Sign Out – End the current session securely
 
 ### 🛡️ Security Features
 
-    PBKDF2 Key Derivation – 600,000 iterations with SHA-256
+  * PBKDF2 Key Derivation – 600,000 iterations with SHA-256
 
-    Unique Salt per User – Prevents rainbow table attacks
+  * Unique Salt per User – Prevents rainbow table attacks
 
-    Chrome Storage API – Data stored securely within the extension's isolated storage
+  * Chrome Storage API – Data stored securely within the extension's isolated storage
 
-    Session Storage – Login state cleared when browser closes
+  * Session Storage – Login state cleared when browser closes
 
-    Real-Time Password Validation – Instant feedback on password strength during registration
+  * Real-Time Password Validation – Instant feedback on password strength during registration
 
-    Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
+  * Master Password Requirements – Enforces length (16–64 characters), uppercase, lowercase, numbers, and symbols
 
 ### 💻 Technologies Used
 
@@ -90,100 +90,100 @@ Built with a focus on security, usability, and modular code organization, the ex
 This extension implements multiple layers of security:
 Master Password Hashing
 
-    Algorithm: PBKDF2-HMAC-SHA256
+  * Algorithm: PBKDF2-HMAC-SHA256
 
-    Iterations: 600,000 (recommended for 2026)
+  * Iterations: 600,000 (recommended for 2026)
 
-    Salt: 16-byte randomly generated salt per user
+  * Salt: 16-byte randomly generated salt per user
 
-    Storage: Salt and hash stored separately in chrome.storage.local
+  * Storage: Salt and hash stored separately in chrome.storage.local
 
 ### Data Protection
 
-    Vault data stored in Chrome's isolated storage (not accessible by websites)
+  * Vault data stored in Chrome's isolated storage (not accessible by websites)
+    
+  * Passwords hidden by default in the vault table
 
-    Passwords hidden by default in the vault table
+   * Session state stored in chrome.storage.session (cleared on browser close)
 
-    Session state stored in chrome.storage.session (cleared on browser close)
-
-    Master password never stored in plaintext
+  * Master password never stored in plaintext
 
 ### Security Design Principles
 
-    No plaintext password storage
+  * No plaintext password storage
 
-    No external database or cloud sync (all data local)
+  * No external database or cloud sync (all data local)
 
-    Extension isolation prevents cross-site access
+  * Extension isolation prevents cross-site access
 
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
 
-    Node.js (v16 or higher)
+  * Node.js (v16 or higher)
 
-    Chrome browser
+  * Chrome browser
 
 ### Development Setup
 
-*Clone the repository
-    bash
+  * Clone the repository
 
-    git clone <repository-url>
+    bash
+    git clone [<repository-url>](https://github.com/kayam1/password-manager)
     cd password-manager-extension
 
-    Install dependencies
-    bash
+  * Install dependencies
 
+    bash
     npm install
 
-    Build project
+  * Build project
+    
     bash
-
     npm run build
 
 ### Loading the Extension in Chrome
 
-    Open Chrome and navigate to chrome://extensions/
+  * Open Chrome and navigate to chrome://extensions/
 
-    Enable Developer mode (toggle in top-right)
+  * Enable Developer mode (toggle in top-right)
 
-    Click Load unpacked
+  * Click Load unpacked
 
-    Select the dist/ or build/ folder from your project
+  * Select the dist/ or build/ folder from your project
 
-    The extension icon should appear in the toolbar
+  * The extension icon should appear in the toolbar
 
 ## 🎯 Usage Guide
 First-Time Setup
 
-    Click the extension icon in the Chrome toolbar
+  * Click the extension icon in the Chrome toolbar
 
-    You'll be directed to the Register Page
+  * You'll be directed to the Register Page
 
-    Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
+  * Create a master password (16–64 characters with uppercase, lowercase, number, and symbol)
 
-    Confirm the password and click Register
+  * Confirm the password and click Register
 
-    The vault will open automatically
+  * The vault will open automatically
 
 ### Logging In
 
-    Enter your master password
+  * Enter your master password
 
-    Click Sign In
+  * Click Sign In
 
-    You'll be redirected to the main vault
+  * You'll be redirected to the main vault
 
 ### Managing Passwords
 
-    Navigate to the Vault tab
+  * Navigate to the Vault tab
 
-    Click the settings icon (⚙️) on any entry
+  * Click the settings icon (⚙️) on any entry
 
-    Choose View, Edit, or Delete
+  * Choose View, Edit, or Delete
 
-    Use the Add Password tab to create new entries
+  * Use the Add Password tab to create new entries
 
 ## 🚀 Future Improvements
 
